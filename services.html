@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan — Arta Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Arta<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang</a>
+                <a href="services.html" class="active">Layanan</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="services.html" class="active">Layanan</a>
+        <a href="contact.html">Kontak</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="products-hero">
+        <div class="section-label" style="justify-content:center;">Layanan & Produk</div>
+        <h2 class="section-title">Apa yang Bisa Kami Bantu</h2>
+        <p class="section-desc">Pilihan layanan yang dirancang untuk memenuhi setiap kebutuhan digital bisnis Anda, dari branding hingga pengembangan web.</p>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="section" style="padding-top:0;">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all" onclick="filterProducts('all', this)">Semua</button>
+            <button class="filter-btn" data-filter="branding" onclick="filterProducts('branding', this)">Branding</button>
+            <button class="filter-btn" data-filter="web" onclick="filterProducts('web', this)">Website</button>
+            <button class="filter-btn" data-filter="uiux" onclick="filterProducts('uiux', this)">UI/UX</button>
+            <button class="filter-btn" data-filter="photo" onclick="filterProducts('photo', this)">Fotografi</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <div class="product-card" data-category="branding">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-brand1-v3/600/450.jpg" alt="Paket Branding Starter">
+                    <span class="product-tag">Branding</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>Paket Branding Starter</h3>
+                    <p>Logo, palet warna, tipografi, dan panduan brand dasar untuk bisnis yang baru memulai perjalanan branding.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 5,5 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="web">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-web1-v3/600/450.jpg" alt="Website Company Profile">
+                    <span class="product-tag">Website</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>Website Company Profile</h3>
+                    <p>Landing page multi-halaman dengan desain kustom, sepenuhnya responsif dan dioptimalkan untuk SEO.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 8 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="uiux">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-uiux1-v3/600/450.jpg" alt="Desain Aplikasi Mobile">
+                    <span class="product-tag">UI/UX</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>Desain Aplikasi Mobile</h3>
+                    <p>Desain lengkap aplikasi mobile: wireframe, high-fidelity mockup, prototype interaktif, dan design system.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 12 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="branding">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-brand2-v3/600/450.jpg" alt="Brand Identity Premium">
+                    <span class="product-tag">Branding</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>Brand Identity Premium</h3>
+                    <p>Identitas brand komprehensif: logo, visual system, packaging design, dan brand guidelines lengkap 50+ halaman.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 15 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="web">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-web2-v3/600/450.jpg" alt="E-Commerce Website">
+                    <span class="product-tag">Website</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>E-Commerce Website</h3>
+                    <p>Toko online lengkap dengan sistem pembayaran, manajemen produk, keranjang belanja, dan dashboard admin.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 20 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="photo">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-photo1-v3/600/450.jpg" alt="Paket Foto Produk">
+                    <span class="product-tag">Fotografi</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>Paket Foto Produk</h3>
+                    <p>Foto produk profesional untuk katalog, marketplace, dan media sosial. Termasuk editing dan retouching.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 3,5 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="uiux">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-uiux2-v3/600/450.jpg" alt="UX Research & Audit">
+                    <span class="product-tag">UI/UX</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>UX Research & Audit</h3>
+                    <p>Riset pengguna, usability testing, heatmap analysis, dan laporan rekomendasi perbaikan UX yang actionable.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 10 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="photo">
+                <div class="product-card-img">
+                    <img src="https://picsum.photos/seed/svc-photo2-v3/600/450.jpg" alt="Video Company Profile">
+                    <span class="product-tag">Fotografi</span>
+                </div>
+                <div class="product-card-body">
+                    <h3>Video Company Profile</h3>
+                    <p>Video profesional untuk memperkenalkan perusahaan Anda: konsep, shooting, editing, hingga final delivery.</p>
+                    <div class="product-footer">
+                        <span class="product-price">Rp 25 Jt</span>
+                        <a href="contact.html" class="product-action" aria-label="Pilih paket"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section reveal" style="background:var(--bg-alt);max-width:100%;padding-left:calc((100% - 1200px)/2 + 2rem);padding-right:calc((100% - 1200px)/2 + 2rem);">
+        <div style="max-width:1200px;margin:0 auto;">
+            <div style="text-align:center;">
+                <div class="section-label" style="justify-content:center;">Proses Kerja</div>
+                <h2 class="section-title">Bagaimana Kami Bekerja</h2>
+                <p class="section-desc" style="margin:0 auto 2rem;">Setiap proyek melewati proses terstruktur untuk memastikan hasil yang optimal dan tepat waktu.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-num">01</div>
+                    <h4>Diskusi & Riset</h4>
+                    <p>Memahami kebutuhan, target audiens, dan tujuan bisnis Anda melalui sesi diskusi mendalam.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-num">02</div>
+                    <h4>Konsep & Strategi</h4>
+                    <p>Merancang konsep kreatif dan strategi yang selaras dengan identitas dan tujuan brand Anda.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-num">03</div>
+                    <h4>Eksekusi & Desain</h4>
+                    <p>Mengerjakan desain dan pengembangan dengan standar kualitas tinggi dan attention to detail.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-num">04</div>
+                    <h4>Revisi & Launch</h4>
+                    <p>Proses revisi terstruktur, testing menyeluruh, dan peluncuran proyek tepat waktu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section reveal">
+        <div style="text-align:center;">
+            <div class="section-label" style="justify-content:center;">Paket Langganan</div>
+            <h2 class="section-title">Pilih Paket yang Tepat</h2>
+            <p class="section-desc" style="margin:0 auto 2rem;">Layanan berkelanjutan dengan harga terjangkau untuk mendukung pertumbuhan bisnis Anda.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <p style="color:var(--fg-muted);font-size:0.9rem;">Untuk bisnis kecil yang baru berkembang</p>
+                <div class="price">Rp 2,5 Jt <span>/ bulan</span></div>
+                <ul class="pricing-features">
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Desain 5 konten media sosial</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> 1x revisi per konten</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Laporan bulanan</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Support via WhatsApp</li>
+                </ul>
+                <a href="contact.html" class="btn btn-outline" style="width:100%;">Pilih Paket</a>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Professional</h3>
+                <p style="color:var(--fg-muted);font-size:0.9rem;">Untuk bisnis yang siap naik level</p>
+                <div class="price">Rp 7,5 Jt <span>/ bulan</span></div>
+                <ul class="pricing-features">
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Desain 15 konten media sosial</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> 3x revisi per konten</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Maintenance website</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Konsultasi strategi brand</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Priority support</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="width:100%;">Pilih Paket</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p style="color:var(--fg-muted);font-size:0.9rem;">Solusi lengkap untuk perusahaan besar</p>
+                <div class="price">Custom</div>
+                <ul class="pricing-features">
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Unlimited desain konten</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Unlimited revisi</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Dedicated team</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> Konsultasi mingguan</li>
+                    <li><span class="feat-icon"><i data-lucide="check" style="width:16px;height:16px;"></i></span> 24/7 support</li>
+                </ul>
+                <a href="contact.html" class="btn btn-outline" style="width:100%;">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Arta<span>.</span></a>
+                    <p>Studio kreatif yang menghadirkan solusi desain dan pengembangan digital bermakna untuk bisnis Indonesia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="services.html">Layanan</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <a href="services.html">Branding</a>
+                    <a href="services.html">Pengembangan Web</a>
+                    <a href="services.html">Desain UI/UX</a>
+                    <a href="services.html">Fotografi</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Informasi</h4>
+                    <a href="about.html">Tentang Kami</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arta Studio. Seluruh hak cipta dilindungi.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="YouTube"><i data-lucide="youtube" style="width:18px;height:18px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

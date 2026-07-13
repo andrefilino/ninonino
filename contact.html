@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak — Arta Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Arta<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="about.html">Tentang</a>
+                <a href="services.html">Layanan</a>
+                <a href="contact.html" class="active">Kontak</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="services.html">Layanan</a>
+        <a href="contact.html" class="active">Kontak</a>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="section-label">Hubungi Kami</div>
+        <h2 class="section-title">Mari Wujudkan Proyek Anda</h2>
+        <p class="section-desc">Ceritakan kebutuhan Anda dan tim kami akan merespons dalam waktu 24 jam kerja.</p>
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="section" style="padding-top:0;">
+        <div class="contact-grid">
+            <!-- Info Cards -->
+            <div class="contact-info-cards">
+                <div class="contact-info-card">
+                    <div class="contact-info-icon"><i data-lucide="map-pin" style="width:22px;height:22px;"></i></div>
+                    <div>
+                        <h4>Alamat Studio</h4>
+                        <p>Jl. Malioboro No. 88, Yogyakarta 55271, Indonesia</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-info-icon"><i data-lucide="mail" style="width:22px;height:22px;"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>halo@artastudio.id<br>project@artastudio.id</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-info-icon"><i data-lucide="phone" style="width:22px;height:22px;"></i></div>
+                    <div>
+                        <h4>Telepon</h4>
+                        <p>+62 274 555 123<br>+62 812 3456 7890</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-info-icon"><i data-lucide="clock" style="width:22px;height:22px;"></i></div>
+                    <div>
+                        <h4>Jam Operasional</h4>
+                        <p>Senin - Jumat: 09.00 - 18.00 WIB<br>Sabtu: 09.00 - 14.00 WIB</p>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <i data-lucide="map" style="width:20px;height:20px;"></i>
+                    Peta Lokasi — Yogyakarta, Indonesia
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:0.4rem;">Kirim Pesan</h3>
+                <p style="font-size:0.88rem;color:var(--fg-muted);margin-bottom:1.5rem;">Isi formulir di bawah ini dan kami akan segera menghubungi Anda.</p>
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nama Lengkap <span class="required">*</span></label>
+                            <input type="text" class="form-input" id="formName" placeholder="Masukkan nama Anda" autocomplete="name">
+                            <div class="form-error" id="errorName">Nama wajib diisi (minimal 3 karakter)</div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email <span class="required">*</span></label>
+                            <input type="email" class="form-input" id="formEmail" placeholder="nama@email.com" autocomplete="email">
+                            <div class="form-error" id="errorEmail">Masukkan alamat email yang valid</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Nomor Telepon <span class="required">*</span></label>
+                            <input type="tel" class="form-input" id="formPhone" placeholder="+62 812 xxxx xxxx" autocomplete="tel">
+                            <div class="form-error" id="errorPhone">Masukkan nomor telepon yang valid (min 10 digit)</div>
+                        </div>
+                        <div class="form-group">
+                            <label>Layanan yang Diminati</label>
+                            <select class="form-input" id="formService">
+                                <option value="">Pilih layanan...</option>
+                                <option value="branding">Branding & Identitas</option>
+                                <option value="web">Pengembangan Web</option>
+                                <option value="uiux">Desain UI/UX</option>
+                                <option value="photo">Fotografi & Videografi</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pesan <span class="required">*</span></label>
+                        <textarea class="form-input" id="formMessage" placeholder="Ceritakan kebutuhan proyek Anda..." rows="5"></textarea>
+                        <div class="form-error" id="errorMessage">Pesan wajib diisi (minimal 10 karakter)</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">
+                        Kirim Pesan
+                        <i data-lucide="send" style="width:18px;height:18px;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section reveal" style="background:var(--bg-alt);max-width:100%;padding-left:calc((100% - 1200px)/2 + 2rem);padding-right:calc((100% - 1200px)/2 + 2rem);">
+        <div style="max-width:800px;margin:0 auto;">
+            <div style="text-align:center;">
+                <div class="section-label" style="justify-content:center;">FAQ</div>
+                <h2 class="section-title">Pertanyaan yang Sering Ditanyakan</h2>
+            </div>
+            <div style="margin-top:2rem;display:flex;flex-direction:column;gap:1rem;">
+                <div class="contact-info-card" style="flex-direction:column;gap:8px;">
+                    <h4 style="display:flex;align-items:center;gap:8px;">
+                        <i data-lucide="help-circle" style="width:18px;height:18px;color:var(--accent);flex-shrink:0;"></i>
+                        Berapa lama waktu pengerjaan proyek?
+                    </h4>
+                    <p style="padding-left:26px;">Tergantung kompleksitas. Website company profile biasanya 3-4 minggu, branding 2-3 minggu, dan aplikasi mobile 6-12 minggu. Kami akan memberikan timeline detail di awal proyek.</p>
+                </div>
+                <div class="contact-info-card" style="flex-direction:column;gap:8px;">
+                    <h4 style="display:flex;align-items:center;gap:8px;">
+                        <i data-lucide="help-circle" style="width:18px;height:18px;color:var(--accent);flex-shrink:0;"></i>
+                        Apakah tersedia garansi revisi?
+                    </h4>
+                    <p style="padding-left:26px;">Ya, setiap paket sudah termasuk jumlah revisi yang ditentukan. Revisi tambahan dapat dikoordinasikan dengan biaya yang wajar.</p>
+                </div>
+                <div class="contact-info-card" style="flex-direction:column;gap:8px;">
+                    <h4 style="display:flex;align-items:center;gap:8px;">
+                        <i data-lucide="help-circle" style="width:18px;height:18px;color:var(--accent);flex-shrink:0;"></i>
+                        Bagaimana sistem pembayarannya?
+                    </h4>
+                    <p style="padding-left:26px;">Pembayaran dilakukan bertahap: 50% di awal proyek, 50% setelah proyek selesai dan disetujui. Transfer bank dan e-wallet tersedia.</p>
+                </div>
+                <div class="contact-info-card" style="flex-direction:column;gap:8px;">
+                    <h4 style="display:flex;align-items:center;gap:8px;">
+                        <i data-lucide="help-circle" style="width:18px;height:18px;color:var(--accent);flex-shrink:0;"></i>
+                        Apakah bisa kerja jarak jauh?
+                    </h4>
+                    <p style="padding-left:26px;">Tentu saja. Sebagian besar klien kami dari luar Yogyakarta. Kami menggunakan tools kolaborasi online untuk komunikasi dan progress update harian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Arta<span>.</span></a>
+                    <p>Studio kreatif yang menghadirkan solusi desain dan pengembangan digital bermakna untuk bisnis Indonesia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="services.html">Layanan</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <a href="services.html">Branding</a>
+                    <a href="services.html">Pengembangan Web</a>
+                    <a href="services.html">Desain UI/UX</a>
+                    <a href="services.html">Fotografi</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Informasi</h4>
+                    <a href="about.html">Tentang Kami</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arta Studio. Seluruh hak cipta dilindungi.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="YouTube"><i data-lucide="youtube" style="width:18px;height:18px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

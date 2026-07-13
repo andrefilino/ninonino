@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arta Studio — Kreativitas Tanpa Batas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-text">Arta<span>.</span></div>
+        <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+    </div>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Arta<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Beranda</a>
+                <a href="about.html">Tentang</a>
+                <a href="services.html">Layanan</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigasi">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="services.html">Layanan</a>
+        <a href="contact.html">Kontak</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Studio Kreatif Terpercaya Sejak 2018
+            </div>
+            <h1>Wujudkan <span class="highlight">Ide Kreatif</span> Menjadi Karya Nyata</h1>
+            <p>Kami menghadirkan solusi desain dan pengembangan digital yang memadukan estetika, fungsi, dan teknologi terkini untuk mengangkat brand Anda.</p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn btn-primary">
+                    Jelajahi Layanan
+                    <i data-lucide="arrow-right" style="width:18px;height:18px;"></i>
+                </a>
+                <a href="contact.html" class="btn btn-outline">Hubungi Kami</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <h3 id="statProjects">0</h3>
+                    <p>Proyek Selesai</p>
+                </div>
+                <div class="hero-stat">
+                    <h3 id="statClients">0</h3>
+                    <p>Klien Puas</p>
+                </div>
+                <div class="hero-stat">
+                    <h3 id="statYears">0</h3>
+                    <p>Tahun Pengalaman</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="https://picsum.photos/seed/arta-hero-v2/880/1040.jpg" alt="Karya kreatif Arta Studio">
+        </div>
+    </section>
+
+    <!-- SLIDESHOW -->
+    <section class="slideshow-section reveal">
+        <div class="slideshow-container" id="slideshow">
+            <div class="slide active">
+                <img src="https://picsum.photos/seed/slide-brand-v2/1200/525.jpg" alt="Branding">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h3>Branding yang Memukau</h3>
+                        <p>Identitas visual yang kuat dan berkesan untuk bisnis Anda</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/seed/slide-web-v2/1200/525.jpg" alt="Web Development">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h3>Website Modern & Responsif</h3>
+                        <p>Pengalaman digital yang mulus di semua perangkat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/seed/slide-uiux-v2/1200/525.jpg" alt="UI/UX Design">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h3>Desain UI/UX Intuitif</h3>
+                        <p>Antarmuka yang elegan dan mudah digunakan pengguna</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://picsum.photos/seed/slide-photo-v2/1200/525.jpg" alt="Photography">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <h3>Fotografi Profesional</h3>
+                        <p>Momen berharga yang diabadikan dengan sentuhan artistik</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-dots" id="slideDots"></div>
+            <div class="slide-controls">
+                <button class="slide-btn" onclick="changeSlide(-1)" aria-label="Slide sebelumnya">
+                    <i data-lucide="chevron-left" style="width:20px;height:20px;"></i>
+                </button>
+                <button class="slide-btn" onclick="changeSlide(1)" aria-label="Slide berikutnya">
+                    <i data-lucide="chevron-right" style="width:20px;height:20px;"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="section reveal">
+        <div class="section-label">Layanan Kami</div>
+        <h2 class="section-title">Solusi Lengkap untuk Kebutuhan Digital Anda</h2>
+        <p class="section-desc">Dari konsep hingga eksekusi, kami menangani setiap aspek dengan presisi dan kreativitas tinggi.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i data-lucide="palette" style="width:24px;height:24px;"></i></div>
+                <h3>Branding & Identitas</h3>
+                <p>Membangun citra brand yang konsisten, mulai dari logo, tipografi, hingga panduan visual lengkap.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i data-lucide="monitor-smartphone" style="width:24px;height:24px;"></i></div>
+                <h3>Pengembangan Web</h3>
+                <p>Website performa tinggi dengan teknologi modern, aman, dan sepenuhnya responsif di semua perangkat.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i data-lucide="figma" style="width:24px;height:24px;"></i></div>
+                <h3>Desain UI/UX</h3>
+                <p>Riset pengguna mendalam dan desain antarmuka yang intuitif untuk pengalaman pengguna optimal.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i data-lucide="camera" style="width:24px;height:24px;"></i></div>
+                <h3>Fotografi & Videografi</h3>
+                <p>Konten visual berkualitas tinggi yang menceritakan kisah brand Anda secara autentik dan memikat.</p>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:3rem;">
+            <a href="services.html" class="btn btn-outline">Lihat Semua Layanan</a>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="testimonials-inner reveal">
+            <div class="section-label">Testimoni</div>
+            <h2 class="section-title">Apa Kata Klien Kami</h2>
+            <p class="section-desc">Kepuasan klien adalah prioritas utama dalam setiap proyek yang kami tangani.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                    </div>
+                    <blockquote>"Arta Studio berhasil mengubah visi kami menjadi identitas brand yang luar biasa. Prosesnya profesional dan hasilnya melebihi ekspektasi."</blockquote>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person1-v2/84/84.jpg" alt="Rina Sari" class="testimonial-avatar">
+                        <div>
+                            <h4>Rina Sari</h4>
+                            <span>CEO, Nusantara Coffee</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                    </div>
+                    <blockquote>"Website yang dibuat sangat cepat dan modern. Tim Arta sangat responsif dan selalu memberikan solusi kreatif untuk setiap tantangan."</blockquote>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person2-v2/84/84.jpg" alt="Budi Hartono" class="testimonial-avatar">
+                        <div>
+                            <h4>Budi Hartono</h4>
+                            <span>Founder, TechVenture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                        <i data-lucide="star" style="width:16px;height:16px;fill:var(--accent);"></i>
+                    </div>
+                    <blockquote>"Kolaborasi dengan Arta Studio adalah keputusan terbaik kami. Desain UI/UX mereka meningkatkan konversi kami hingga 40%."</blockquote>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person3-v2/84/84.jpg" alt="Maya Putri" class="testimonial-avatar">
+                        <div>
+                            <h4>Maya Putri</h4>
+                            <span>CMO, GreenLife Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">Arta<span>.</span></a>
+                    <p>Studio kreatif yang menghadirkan solusi desain dan pengembangan digital bermakna untuk bisnis Indonesia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="about.html">Tentang</a>
+                    <a href="services.html">Layanan</a>
+                    <a href="contact.html">Kontak</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Layanan</h4>
+                    <a href="services.html">Branding</a>
+                    <a href="services.html">Pengembangan Web</a>
+                    <a href="services.html">Desain UI/UX</a>
+                    <a href="services.html">Fotografi</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Informasi</h4>
+                    <a href="about.html">Tentang Kami</a>
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arta Studio. Seluruh hak cipta dilindungi.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px;"></i></a>
+                    <a href="#" aria-label="YouTube"><i data-lucide="youtube" style="width:18px;height:18px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
